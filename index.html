@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Automobile Syndicate</title>
+	<link rel="stylesheet" href="assets/css/main.css">
+	<script src="assets/js/main.js" defer></script>
+</head>
+<body>
+	
+	<div class="wrapper">
+		<div class="sidebar">
+			<div class="sidebar__body">
+				<div class="sidebar__logo">
+					<img src="assets/img/logo.png" alt="logo">
+				</div>
+				<ul class="sidebar__list">
+					<li class="sidebar__list__link"><a href="#" data-tabs-handler="inventory"><img src="assets/img/supplies.svg" alt="supplies"><span>Inventory</span></a></li>
+					<li class="sidebar__list__link active"><a href="#" data-tabs-handler="account"><img src="assets/img/fedora.svg" alt="fedora"><span>Account</span></a></li>
+					<li class="sidebar__list__link"><a href="#" data-tabs-handler="mafia"><img src="assets/img/bandit.svg" alt="bandit"><span>Mafia</span></a></li>
+					<li class="sidebar__list__link"><a href="#" data-tabs-handler="mechanics"><img src="assets/img/settings.svg" alt="settings"><span>Mechanics</span></a></li>
+					<li class="sidebar__list__link"><a href="#" data-tabs-handler="exchange"><img src="assets/img/money-exchange.svg" alt="money"><span>Exchange</span></a></li>
+					<li class="sidebar__list__link"><a href="#" ><img src="assets/img/car.svg" alt="car"><span>Market</span></a></li>
+				</ul>
+				<div class="sidebar__copyright">
+					CopyRight 2022 © <span>AMafia</span>
+				</div>
+			</div>
+		</div>
+		<header class="header">
+			<div class="header__body">
+				<div class="header__title">
+					<h2>Account</h2>
+				</div>
+				<div class="header__data">
+					<div class="header__money header__data__item">
+						<div class="header__money__icon"><div class="header__money__icon--img"></div></div>
+						<div class="header__money__count">0.0000000</div>
+					</div>
+					<div class="header__token header__data__item">
+						<div class="header__token__icon"><div class="header__token__icon--img"></div></div>
+						<div class="header__token__count">0</div>
+					</div>
+					<div class="header__user header__data__item">
+						<div class="header__user__icon header__data__item__icon"><img src="assets/img/user.jfif" class="header__user__icon--img"></img></div>
+						<div class="header__user__name">username</div>
+						<div class="header__user__arrow"><img src="assets/img/arrow.svg" alt="arrow" class="header__user__arrow--img"></div>
+						<div class="header__user__logout">
+							<a href="#">
+								<img src="assets/img/logout.svg" alt="logout">
+								<span>Logout</span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<main class="main">
+			<div class="container">
+				<div class="main__body main__account" data-tabs-field="account">
+					<div class="main__title">
+						Welcome back, username
+					</div>
+					<div class="account__blocks">
+						<div class="account__checks">
+							<div class="account__checks__external">
+								<div class="account__checks__title">Your external balance</div>
+								<div class="account__checks__item">
+									<div class="account__checks__item__title"><div class="account__checks__item__title__img"></div><span>$SRP</span></div>
+									<div class="account__checks__item__count">0</div>
+								</div>
+							</div>
+							<div class="account__checks__internal">
+								<div class="account__checks__title">Your internal balance</div>
+								<div class="account__checks__item">
+									<div class="account__checks__item__title"><div class="account__checks__item__title__img"></div><span>Money</span></div>
+									<div class="account__checks__item__count">0.0000000</div>
+								</div>
+								<div class="account__checks__item">
+									<div class="account__checks__item__title"><div class="account__checks__item__title__img"></div><span>$SRP</span></div>
+									<div class="account__checks__item__count">0</div>
+								</div>
+							</div>
+						</div>
+						<div class="account__operations">
+							<div class="account__deposit account__operations__item">
+								<div class="account__operations__title">Deposit $SRP</div>
+								<div class="account__operations__input"><input type="number" value="0" min="0" pattern="^[1-9]\d*$"></div>
+								<div class="account__operations__submit"><input type="submit" value="deposit"></div>
+							</div>
+							<div class="account__withdraw account__operations__item">
+								<div class="account__operations__title">Withdraw $SRP</div>
+								<div class="account__operations__input"><input type="number" value="0" min="0" pattern="^[1-9]\d*$"></div>
+								<div class="account__operations__submit"><input type="submit" value="withdraw"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="main__body main__mechanics hidden" data-tabs-field="mechanics">
+					<div class="mechanics__list nft__list">
+						<div class="mechanics__list__item mechanics__list__item--add nft__list__item nft__list__item--add">
+							<div class="mechanics__list__item__link nft__list__item__link">
+								<a href="#">
+									<img src="assets/img/plus.svg" alt="plus">
+								</a>
+							</div>
+							<div class="mechanics__list__item__title nft__list__item__title">Add NFT</div>
+							<div class="mechanics__list__item__buttons nft__list__item__buttons">
+								<a href="#" class="mechanics__list__item__button mechanics__list__item__button--solid nft__list__item__button nft__list__item__button--solid">
+									Stake
+								</a>
+								<a href="#" class="mechanics__list__item__button mechanics__list__item__button--bordered nft__list__item__button nft__list__item__button--bordered">
+									Unstake
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="main__body main__mafia hidden" data-tabs-field="mafia">
+					<div class="main__buttons">
+						<a href="#">mass assign</a>
+						<p>Active missions: 0/40</p>
+					</div>
+					<div class="mafia__list nft__list">
+						<div class="mafia__list__item mafia__list__item--add nft__list__item">
+							<div class="mafia__list__item__link nft__list__item__link">
+								<a href="#">
+									<img src="assets/img/plus.svg" alt="plus">
+								</a>
+							</div>
+							<div class="mafia__list__item__title nft__list__item__title">Add NFT</div>
+							<div class="mafia__list__item__buttons nft__list__item__buttons">
+								<a href="#" class="mafia__list__item__button mafia__list__item__button--solid nft__list__item__button nft__list__item__button--solid">
+									Stake
+								</a>
+								<a href="#" class="mafia__list__item__button mafia__list__item__button--bordered nft__list__item__button nft__list__item__button--bordered">
+									Unstake
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="main__body main__exchange hidden" data-tabs-field="exchange">
+					<div class="exchange__checks">
+						<div class="exchange__checks__title">Your internal balance</div>
+						<div class="exchange__checks__item">
+							<div class="exchange__checks__item__title"><div class="exchange__checks__item__title__img"></div><span>Money</span></div>
+							<div class="exchange__checks__item__count">0.0000000</div>
+						</div>
+						<div class="exchange__checks__item">
+							<div class="exchange__checks__item__title"><div class="exchange__checks__item__title__img"></div><span>$SRP</span></div>
+							<div class="exchange__checks__item__count">0</div>
+						</div>
+					</div>
+					<div class="exchange__operations">
+						<div class="exchange__operations__title">Exchange</div>
+						<div class="exchange__operations__txt">
+							<h5>Current swap rate</h5>
+							<p>1 DOLLAR ≈ 69628.6675 $SRP</p>
+						</div>
+						<div class="exchange__operations__form">
+							<div class="exchange__operations__item">
+								<div class="exchange__operations__inputBlock">
+									<div class="exchange__operations__inputBlock__title">Money to $SRP</div>
+									<input type="number" class="exchange__operations__inputBlock__input">
+								</div>
+								<input type="submit" value="Change" class="exchange__operations__item__button"/>
+							</div>
+							<div class="exchange__operations__item">
+								<div class="exchange__operations__inputBlock">
+									<div class="exchange__operations__inputBlock__title">$SRP to Money</div>
+									<input type="number" class="exchange__operations__inputBlock__input">
+								</div>
+								<input type="submit" value="Change" class="exchange__operations__item__button"/>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="main__body main__inventory hidden" data-tabs-field="inventory">
+					<div class="inventory__subheader">
+						All your NFT assets are here
+					</div>
+					<div class="inventory__content">
+						<div class="inventory__buyNFT">
+							<div class="inventory__buyNFT__image"><div></div></div>
+							<div class="inventory__buyNFT__title">NFT Assets</div>
+							<a href="#" class="inventory__buyNFT__button">Buy on AtomicHub</a>
+							<div class="inventory__buyNFT__description">
+								<div class="inventory__buyNFT__description__amount">
+									<p>You have:</p>
+									<span>0</span>
+								</div>
+								<div class="inventory__buyNFT__description__line"></div>
+								<div class="inventory__buyNFT__description__note">
+									Note: Your NFTs will automatically appear in this section after you have purchased them.
+								</div>
+							</div>
+						</div>
+						<div class="inventory__table">
+							<div class="inventory__table__block">
+								<div class="inventory__table__head">
+									<div class="inventory__table__head__item">Name</div>
+									<div class="inventory__table__head__item">NFT ID</div>
+									<div class="inventory__table__head__item">STAFF Production</div>
+									<div class="inventory__table__head__item">Rarity</div>
+								</div>
+								<div class="inventory__table__item">
+									<div class="inventory__table__item__cell">
+										<div class="inventory__table__item__cell__img"><div></div></div>
+										<div class="inventory__table__item__cell__name">Bronze Whitelist Pass</div>
+									</div>
+									<div class="inventory__table__item__cell">
+										#1005020102476
+									</div>
+									<div class="inventory__table__item__cell">0/hr</div>
+									<div class="inventory__table__item__cell">None</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+	</div>
+
+</body>
+</html>

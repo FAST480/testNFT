@@ -1,0 +1,52 @@
+<script src="../assets/js/waxjs.js"></script>
+<p class="name"></p>
+<p class="pub"></p>
+
+<div id="response"></div>
+
+<button onclick="signin()">Signin</button>
+
+<script>
+	var keysArray = sessionStorage['pubKeys'].split(',');
+
+	 const wax = new waxjs.WaxJS({
+	   rpcEndpoint: 'https://wax.greymass.com',
+	   userAccount: sessionStorage['userName'],
+	   pubKeys: [keysArray[0],keysArray[1]]
+	 });
+
+	document.querySelector('.name').innerHTML = sessionStorage['userName'];
+	document.querySelector('.pub').innerHTML = sessionStorage['pubKeys']; 
+
+	alert(wax.userAccount);
+
+	async function signin() {
+
+	    try {
+	        const result = await wax.api.transact({
+	        actions: [{
+	            account: 'eosio',
+	            name: 'delegatebw',
+	            authorization: [{
+		            actor: wax.userAccount,
+		            permission: 'active',
+		        }],
+	            data: {
+		            from: wax.userAccount,
+		            receiver: wax.userAccount,
+		            stake_net_quantity: '0.00000001 WAX',
+		            stake_cpu_quantity: '0.00000000 WAX',
+		            transfer: false,
+		            memo: ''
+	            },
+	        }]
+	        }, {
+	        blocksBehind: 3,
+	        expireSeconds: 30
+	        });
+	        document.getElementById('response').append(JSON.stringify(result, null, 2))
+	    } catch(e) {
+	        document.getElementById('response').append(e.message);
+	    }
+    }
+</script>
